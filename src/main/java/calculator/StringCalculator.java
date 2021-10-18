@@ -75,13 +75,13 @@ public int addFour(String input) {
     private int getSumFour(String[] numbers)  {
     	int sum = 0;
     	for(int index = 0; index < numbers.length;index++) {
-    		sum = stringToInt(numbers[index]) + sum;
+    		sum = stringToIntFour(numbers[index]) + sum;
     		
     	}
     	
     	return sum;
     }
-    private int stringToInt(String number) {
+    private int stringToIntFour(String number) {
         int num = Integer.parseInt(number);
         if (num < 0) {
             throw new IllegalArgumentException("Negative no not allowed");
@@ -90,6 +90,44 @@ public int addFour(String input) {
         }
     }
 
+    
+    
+    
+    
+    
+public int addFive(String input) {
+    	
+    	String [] arr = input.split(",|\n");
+    	
+        if(input.isEmpty()) {
+        	return 0;
+        }else if(arr.length == 1) {
+    		return Integer.parseInt(arr[0]);
+    	}
+    	else  {
+    		return getSumFive(arr);
+    	}
+    }
+    
+    private int getSumFive(String[] numbers)  {
+    	int sum = 0;
+    	for(int index = 0; index < numbers.length;index++) {
+    		if(stringToIntFive(numbers[index])<=1000) {
+    			sum = Integer.parseInt(numbers[index]) + sum;
+    		}
+    		
+    	}
+    	
+    	return sum;
+    }
+    private int stringToIntFive(String number) {
+        int num = Integer.parseInt(number);
+        if (num < 0) {
+            throw new IllegalArgumentException("Negative no not allowed");
+        } else {
+            return num;
+        }
+    }
     
     
     
