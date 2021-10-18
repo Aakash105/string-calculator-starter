@@ -24,7 +24,11 @@ class StringCalculatorShould {
     	assertEquals(2, stringCalculator.addTwo("1,1"));
     }
     
-
+    @Test
+    void string_with_more_number_should_return_number_as_sum() throws Exception {
+    	StringCalculator stringCalculator = new StringCalculator();
+    	assertEquals(3, stringCalculator.add("1,1,1"));
+    }
     
    
     
