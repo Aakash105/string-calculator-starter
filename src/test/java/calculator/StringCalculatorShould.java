@@ -18,10 +18,16 @@ class StringCalculatorShould {
         assertEquals(1, stringCalculator.add("1"));
     }
     
-    public int add(String input) {
-        if(input.isEmpty()) {
-        	return 0;
-        }
-    	return Integer.parseInt(input);
+    @Test
+    void string_with_two_number_should_return_number_as_sum() {
+    	StringCalculator stringCalculator = new StringCalculator();
+    	assertEquals(2, stringCalculator.addTwo("1,1"));
     }
+    
+
+    
+   
+    
+    
+
 }
