@@ -30,7 +30,11 @@ class StringCalculatorShould {
     	assertEquals(3, stringCalculator.add("1,1,1"));
     }
     
-   
+    @Test
+    void string_with_two_number_with_newLine_should_return_number_as_sum() throws Exception {
+    	StringCalculator stringCalculator = new StringCalculator();
+    	assertEquals(2, stringCalculator.addThree("1\n1"));
+    }
     
     
 
