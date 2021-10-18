@@ -54,6 +54,41 @@ class StringCalculator {
     	
     	return sum;
     }
+    
+    
+    
+    
+public int addFour(String input) {
+    	
+    	String [] arr = input.split(",|\n");
+    	
+        if(input.isEmpty()) {
+        	return 0;
+        }else if(arr.length == 1) {
+    		return Integer.parseInt(arr[0]);
+    	}
+    	else  {
+    		return getSumFour(arr);
+    	}
+    }
+    
+    private int getSumFour(String[] numbers)  {
+    	int sum = 0;
+    	for(int index = 0; index < numbers.length;index++) {
+    		sum = stringToInt(numbers[index]) + sum;
+    		
+    	}
+    	
+    	return sum;
+    }
+    private int stringToInt(String number) {
+        int num = Integer.parseInt(number);
+        if (num < 0) {
+            throw new IllegalArgumentException("Negative no not allowed");
+        } else {
+            return num;
+        }
+    }
 
     
     
